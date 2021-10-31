@@ -1,7 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import ssl
 
-server_cert = './server.pem'
+server_cert = './certificates/server.pem'
 listen_addr = '127.0.0.1'
 listen_port = 80
 

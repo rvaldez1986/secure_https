@@ -1,10 +1,11 @@
 import socket
 import ssl
+import requests
 
 host_addr = '127.0.0.1'
 host_port = 80
 server_sni_hostname = 'example.com'
-server_cert = './server.pem'  #to validate
+server_cert = './certificates/server.pem'  #to validate
 
 
 context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
@@ -20,9 +21,11 @@ print("Sending message")
 conn.send(b"GET / HTTP/1.1\r\nHost: example.com\r\n\r\n")
 print("sent") 
 
-try:
-    response = conn.recv(4096)
-    print(response)   
+try:	
+	print("recieve response:")
+	response = conn.recv(4096)
+	print(response)   
+
 except:
     pass
 
