@@ -3,7 +3,7 @@ import ssl
 
 server_cert = './certificates/server.pem'
 listen_addr = '127.0.0.1'
-listen_port = 80
+listen_port = 443
 
 
 class run_server(BaseHTTPRequestHandler):

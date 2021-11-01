@@ -3,7 +3,7 @@ import ssl
 import requests
 
 host_addr = '127.0.0.1'
-host_port = 80
+host_port = 443
 server_sni_hostname = 'example.com'
 server_cert = './certificates/server.pem'  #to validate
 
